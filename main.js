@@ -18,9 +18,11 @@ let burger = [];
 
 /* nukopijuoju ingridientus i temp variable */
 let ingridientsForRecepe = ingridients.slice();
-
+recepe.push(ingridientsForRecepe[0]);
+ingridientsForRecepe.shift();
+console.log(recepe);
 /* pasiimu random skaiciu atsizvelgiant i ilgi ingridientu */
-let randomIteration = Math.floor(Math.random() * (ingridientsForRecepe.length-2) + 3);
+let randomIteration = Math.floor(Math.random() * (ingridientsForRecepe.length-1) + 2);
 
 /* pasiimtu atsitiktini recepta pagal ilgi, pushinu ir isiimu is temp */
 let randomIngridient = () => {
@@ -67,14 +69,16 @@ let removeIngridient = (element) => {
         if (!ingridients.hasChildNodes()){  
             let newNode = document.createElement('div');
             newNode.className = classname[0];
-            return ingridients.appendChild(newNode).addEventListener("click", takeIngridient);;
+            ingridients.appendChild(newNode).addEventListener("click", takeIngridient);
+            return burgerDraw();
             
             
         }
     }
+    burgerDraw();
 }
 
-let burgerAddIngridient = () => {
+let burgerDraw = () => {
     bottomMargin = 0;
     burgerContainer.innerHTML = "";
     burger.forEach((ingridient) => {
@@ -82,7 +86,7 @@ let burgerAddIngridient = () => {
         newNode.className = `${ingridient} on-plate`;
         newNode.style = `bottom: ${bottomMargin}%`;
         burgerContainer.appendChild(newNode).addEventListener("click", removeIngridient);
-        bottomMargin += 10;
+        bottomMargin += 7;
         
     })
 
@@ -96,7 +100,7 @@ let takeIngridient = (element) => {
     compare(recepe);
     element.target.remove();
     
-    burgerAddIngridient();
+    burgerDraw();
 
 }
 

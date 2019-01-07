@@ -53,7 +53,7 @@ main {
 }
 
 .plate-container .burger {
-  height: 87%;
+  height: 72%;
   width: 50%;
   left: 25%;
   position: relative;
@@ -62,8 +62,11 @@ main {
 
 .plate-container .plate {
   width: 80%;
-  height: 10%;
-  background-color: grey;
+  height: 50%;
+  background-image: url(./plate.png);
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  background-position: center;
   position: absolute;
   border-radius: 50%;
   left: 10%;
@@ -110,17 +113,23 @@ main {
 }
 
 .bun-bottom {
-  background-color: yellow;
-  height: 30%;
-  width: 80%;
+  background-image: url(./bun-bottom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% auto;
+  height: 40%;
+  width: 70%;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  left: 10%;
+  left: 15%;
 }
 
 .bun-top {
-  background-color: yellow;
-  height: 30%;
+  background-image: url(./bun-top.png);
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  background-size: 50% auto;
+  height: 40%;
   width: 80%;
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
@@ -128,7 +137,10 @@ main {
 }
 
 .meat {
-  background-color: darkred;
+  background-image: url(./meat.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70% auto;
   height: 40%;
   width: 60%;
   border-radius: 50%;
@@ -136,24 +148,33 @@ main {
 }
 
 .tomato {
-  background-color: red;
-  height: 40%;
-  width: 60%;
-  border-radius: 50%;
-  left: 20%;
-}
-
-.lettuce {
-  background-color: green;
+  background-image: url(./tomato.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
   height: 40%;
   width: 50%;
-  border-top-right-radius: 10%;
-  border-bottom-left-radius: 10%;
+  border-radius: 50%;
   left: 25%;
 }
 
+.lettuce {
+  background-image: url(./lettuce.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
+  height: 40%;
+  width: 40%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  left: 30%;
+}
+
 .cheese {
-  background-color: orange;
+  background-image: url(./cheese.png);
+  background-repeat: no-repeat;
+  background-position: center 120%;
+  background-size: 100% auto;
   height: 40%;
   width: 50%;
   left: 25%;
@@ -162,5 +183,20 @@ main {
 .on-plate {
   position: absolute;
   bottom: 0;
+  height: 18%;
+}
+
+.on-plate.lettuce {
+  -webkit-transform: rotateX(45deg);
+          transform: rotateX(45deg);
+  height: 22%;
+}
+
+.on-plate.cheese {
+  background-position: center 120%;
+}
+
+.on-plate.bun-top {
+  height: 22%;
 }
 /*# sourceMappingURL=main.css.map */
