@@ -29,17 +29,29 @@ main {
   -webkit-box-flex: 40%;
       -ms-flex: 40%;
           flex: 40%;
-  background-color: darkslateblue;
+  background-color: #ffdfb0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .recepe-container .recepe {
-  width: 80%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 50%;
+          flex: 0 50%;
+  max-width: 50%;
   font-size: 20px;
   text-align: center;
+  border: 1px solid black;
+  list-style: none;
 }
 
 .recepe-container .recepe li {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .plate-container {

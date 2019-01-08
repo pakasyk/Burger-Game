@@ -22,17 +22,21 @@ main {
 .recepe-container {
     height: 60%;
     flex: 40%;
-    background-color: darkslateblue;
+    background-color: #ffdfb0;
+    display: flex;
+    flex-flow: row wrap;
     
     .recepe {
-        width: 80%;
+        flex: 0 50%;
+        max-width: 50%;
         font-size: 20px;
         text-align: center;
-        
+        border: 1px solid black;
+        list-style: none;
 
 
         li {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
             
         }
